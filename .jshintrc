@@ -1,0 +1,22 @@
+{
+  "bitwise": true,
+  "curly": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "esversion": 6,
+  "forin": true,
+  "globals": {
+  },
+  "latedef": true,
+  "noarg": true,
+  "nonew": true,
+  "predef": [
+    "console",
+    "document",
+    "window"
+  ],
+  "strict": "implied",
+  "undef": true,
+  "unused": true,
+  "varstmt": true
+}

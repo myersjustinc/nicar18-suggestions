@@ -1,0 +1,24 @@
+{
+  "name": "nicar-2018-suggestions",
+  "version": "0.1.0",
+  "description": "Interactive list of suggested restaurants and other venues for attendees of #NICAR18.",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "lint": "jshint webpack.config.js src/",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Justin Myers",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "buble": "^0.18.0",
+    "buble-loader": "^0.4.1",
+    "clean-webpack-plugin": "^0.1.18",
+    "css-loader": "^0.28.9",
+    "file-loader": "^1.1.6",
+    "html-loader": "^0.5.5",
+    "jshint": "^2.9.5",
+    "style-loader": "^0.20.1",
+    "webpack": "^3.10.0"
+  }
+}
