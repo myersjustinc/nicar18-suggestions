@@ -7,7 +7,7 @@ import sanitizeFormValue from '../utils/sanitizeFormValue';
 import resultsHTML from './ResultsView.html';
 import resultsCSS from './ResultsView.css';  // jshint unused:false
 
-export default class PremiumsView {
+export default class ResultsView {
   constructor(elem, showDetails) {
     this.elem = elem;
     this.showDetails = showDetails;

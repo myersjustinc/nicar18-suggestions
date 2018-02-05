@@ -25963,7 +25963,7 @@ module.exports = function (css) {
 
   // jshint unused:false
 
-var PremiumsView = function PremiumsView(elem, showDetails) {
+var ResultsView = function ResultsView(elem, showDetails) {
   this.elem = elem;
   this.showDetails = showDetails;
   this.handlersBound = false;
@@ -25971,7 +25971,7 @@ var PremiumsView = function PremiumsView(elem, showDetails) {
 
 // =-=-=-=-=-=-=-=-=-=-=-= PUBLIC METHODS FOLLOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-PremiumsView.prototype.render = function render (results) {
+ResultsView.prototype.render = function render (results) {
   this.bindHandlers();
   this.elem.classList.add('results-view');
   this.elem.innerHTML = __WEBPACK_IMPORTED_MODULE_4__ResultsView_html__["a" /* default */];
@@ -25985,14 +25985,14 @@ PremiumsView.prototype.render = function render (results) {
 
 // =-=-=-=-=-=-=-=-=-=-=- INTERNAL METHODS FOLLOW -=-=-=-=-=-=-=-=-=-=-=-=-=-
 
-PremiumsView.prototype.bindHandlers = function bindHandlers () {
+ResultsView.prototype.bindHandlers = function bindHandlers () {
   var delegate = new __WEBPACK_IMPORTED_MODULE_0_dom_delegate__["Delegate"](document.body);
   delegate.on(
     'click', '.results--result--show-detail',
     this.handleShowDetailClick.bind(this));
   this.handlersBound = true;
 };
-PremiumsView.prototype.cacheResults = function cacheResults (results) {
+ResultsView.prototype.cacheResults = function cacheResults (results) {
   var cached = {};
   results.forEach(function (result) {
     var timestamp = Object(__WEBPACK_IMPORTED_MODULE_2__utils_formatTimestamp__["a" /* default */])(result.Timestamp);
@@ -26001,7 +26001,7 @@ PremiumsView.prototype.cacheResults = function cacheResults (results) {
   });
   this.results = cached;
 };
-PremiumsView.prototype.formatCost = function formatCost (rawCost) {
+ResultsView.prototype.formatCost = function formatCost (rawCost) {
   var abbreviation = (function() {
     if (rawCost === 'Free') {
       return '\u2205';
@@ -26025,7 +26025,7 @@ PremiumsView.prototype.formatCost = function formatCost (rawCost) {
       abbreviation,
     '</abbr>' ].join('');
 };
-PremiumsView.prototype.formatTransit = function formatTransit (rawTransit) {
+ResultsView.prototype.formatTransit = function formatTransit (rawTransit) {
   var canWalk = /\bWalking distance\b/.test(rawTransit);
   var canTrain = /\bTrain\b/.test(rawTransit);
   var canBus = /\bBus\b/.test(rawTransit);
@@ -26052,20 +26052,20 @@ PremiumsView.prototype.formatTransit = function formatTransit (rawTransit) {
   }
   return components.join('');
 };
-PremiumsView.prototype.handleShowDetailClick = function handleShowDetailClick (event) {
+ResultsView.prototype.handleShowDetailClick = function handleShowDetailClick (event) {
   var lookupTimestamp = event.target.getAttribute('href').slice(1);
   var result = this.results[lookupTimestamp];
   this.showDetails(result);
   event.preventDefault();
 };
-PremiumsView.prototype.renderResults = function renderResults (results) {
+ResultsView.prototype.renderResults = function renderResults (results) {
     var this$1 = this;
 
   var resultsBody = this.elem.querySelector('.results--results tbody');
   resultsBody.innerHTML = results.map(
     function (result) { return this$1.renderRow(result); }).join('');
 };
-PremiumsView.prototype.renderRow = function renderRow (result) {
+ResultsView.prototype.renderRow = function renderRow (result) {
   return [
     '<tr>',
       '<td class="results--result--name">',
@@ -26084,7 +26084,7 @@ PremiumsView.prototype.renderRow = function renderRow (result) {
     '</tr>'
   ].join('');
 };
-PremiumsView.prototype.renderSummary = function renderSummary (results) {
+ResultsView.prototype.renderSummary = function renderSummary (results) {
   var resultsCount = results.length;
   var countElem = this.elem.querySelector('.results--summary--count');
   var countFormatted = Object(__WEBPACK_IMPORTED_MODULE_1__utils_apNumber__["a" /* default */])(resultsCount);
@@ -26092,7 +26092,7 @@ PremiumsView.prototype.renderSummary = function renderSummary (results) {
   countElem.textContent = countFormatted + ' ' + resultUnits;
 };
 
-/* harmony default export */ __webpack_exports__["a"] = (PremiumsView);
+/* harmony default export */ __webpack_exports__["a"] = (ResultsView);
 
 
 /***/ }),
