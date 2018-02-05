@@ -1,9 +1,14 @@
+import DetailView from './DetailView/DetailView';
 import ResultsView from './ResultsView/ResultsView';
 
 const Tabletop = window.Tabletop;
 
+const detailElem = document.getElementById('detail');
+const detailView = new DetailView(detailElem);
+
 function showDetails(result) {
-  console.log('Showing details for', result);
+  detailView.render(result);
+  detailView.show();
 }
 
 const resultsElem = document.getElementById('results');

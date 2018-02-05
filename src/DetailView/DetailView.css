@@ -1,0 +1,67 @@
+.detail-view {
+  display: block;
+  font-family: Helvetica, Arial, sans-serif;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9001;
+}
+.detail-view.detail-view--hidden {
+  display: none;
+}
+  .detail-view .detail--modal--background {
+    background-color: #999;
+    background-color: rgba(153, 153, 153, 0.2);
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .detail-view .detail--frame {
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    display: block;
+    left: 5%;
+    padding: 1em;
+    position: absolute;
+    top: 2em;
+    width: 80%;
+    z-index: 9002;
+  }
+    .detail-view .detail--close {
+      border-width: 0;
+      cursor: pointer;
+      font-size: 1em;
+      padding: 0.25em 0.5em;
+      position: absolute;
+      right: 0.25em;
+      top: 0.25em;
+    }
+    .detail-view .detail--close:hover {
+      background-color: #aaa;
+    }
+
+    .detail-view .detail--name {
+      font-size: 1.5em;
+      font-weight: bold;
+      margin-top: 0.166667em;
+      max-width: 80%;
+    }
+
+    .detail-view .detail--wrapper {
+      overflow-y: scroll;
+    }
+
+    .detail-view .detail--details th,
+    .detail-view .detail--details td {
+      padding-bottom: 1em;
+      vertical-align: top;
+    }
+    .detail-view .detail--details th {
+      max-width: 10em;
+      padding-right: 1em;
+      text-align: left;
+    }
