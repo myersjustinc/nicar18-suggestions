@@ -1,7 +1,13 @@
+import ResultsView from './ResultsView/ResultsView';
+
 const Tabletop = window.Tabletop;
+
+const resultsElem = document.getElementById('results');
+const resultsView = new ResultsView(resultsElem);
 
 function init(data) {
   console.log(data);
+  resultsView.render(data);
 }
 
 Tabletop.init({
