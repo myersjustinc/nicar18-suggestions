@@ -1,4 +1,5 @@
 import DetailView from './DetailView/DetailView';
+import FilterControl from './FilterControl/FilterControl';
 import ResultsView from './ResultsView/ResultsView';
 
 const Tabletop = window.Tabletop;
@@ -14,8 +15,14 @@ function showDetails(result) {
 const resultsElem = document.getElementById('results');
 const resultsView = new ResultsView(resultsElem, showDetails);
 
+const filterElem = document.getElementById('filters');
+const filterControl = new FilterControl(
+  filterElem, resultsView.render.bind(resultsView));
+filterControl.render();
+
 function init(data) {
-  resultsView.render(data);
+  filterControl.setResults(data);
+  filterControl.applyFilters();
 }
 
 Tabletop.init({

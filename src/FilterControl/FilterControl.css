@@ -1,0 +1,31 @@
+.filter-control {
+  font-family: Helvetica, Arial, sans-serif;
+}
+  .filter-control .filters--fields,
+  .filter-control .filters--field {
+    list-style-type: none;
+    margin-left: 0;
+    padding-left: 0;
+    text-indent: 0;
+  }
+    .filter-control .filters--field--name {
+      font-weight: bold;
+      margin-right: 2em;
+      margin-top: 0;
+    }
+    .filter-control .filters--field--name,
+    .filter-control .filters--field--options {
+      display: inline-block;
+      vertical-align: top;
+    }
+    .filter-control .filters--field--options,
+    .filter-control .filters--field--option {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+      text-indent: 0;
+    }
+      .filter-control .filters--field--option {
+        display: inline-block;
+        margin-right: 1em;
+      }
