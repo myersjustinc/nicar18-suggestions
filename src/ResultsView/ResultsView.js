@@ -77,17 +77,24 @@ export default class PremiumsView {
     const canBus = /\bBus\b/.test(rawTransit);
     const canCar = /\bUber\/Lyft\/Taxi\b/.test(rawTransit);
     let components = [];
+    function addAbbr(title, codePoint) {
+      components.push([
+        '<abbr title="', title, '">',
+          String.fromCodePoint(codePoint),
+        '</abbr>'
+      ].join(''));
+    }
     if (canWalk) {
-      components.push('<abbr title="Walking distance">\u{1f6b6}</abbr>');
+      addAbbr('Walking distance', 0x1f6b6);
     }
     if (canTrain) {
-      components.push('<abbr title="Train">\u{1f687}</abbr>');
+      addAbbr('Train', 0x1f687);
     }
     if (canBus) {
-      components.push('<abbr title="Bus">\u{1f68c}</abbr>');
+      addAbbr('Bus', 0x1f68c);
     }
     if (canCar) {
-      components.push('<abbr title="Uber/Lyft/Taxi">\u{1f695}</abbr>');
+      addAbbr('Uber/Lyft/Taxi', 0x1f695);
     }
     return components.join('');
   }

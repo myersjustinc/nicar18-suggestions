@@ -12586,17 +12586,24 @@ PremiumsView.prototype.formatTransit = function formatTransit (rawTransit) {
   var canBus = /\bBus\b/.test(rawTransit);
   var canCar = /\bUber\/Lyft\/Taxi\b/.test(rawTransit);
   var components = [];
+  function addAbbr(title, codePoint) {
+    components.push([
+      '<abbr title="', title, '">',
+        String.fromCodePoint(codePoint),
+      '</abbr>'
+    ].join(''));
+  }
   if (canWalk) {
-    components.push('<abbr title="Walking distance">\u{1f6b6}</abbr>');
+    addAbbr('Walking distance', 0x1f6b6);
   }
   if (canTrain) {
-    components.push('<abbr title="Train">\u{1f687}</abbr>');
+    addAbbr('Train', 0x1f687);
   }
   if (canBus) {
-    components.push('<abbr title="Bus">\u{1f68c}</abbr>');
+    addAbbr('Bus', 0x1f68c);
   }
   if (canCar) {
-    components.push('<abbr title="Uber/Lyft/Taxi">\u{1f695}</abbr>');
+    addAbbr('Uber/Lyft/Taxi', 0x1f695);
   }
   return components.join('');
 };
@@ -25649,7 +25656,7 @@ exports = module.exports = __webpack_require__(146)(false);
 
 
 // module
-exports.push([module.i, ".results-view {\n  font-family: Helvetica, Arial, sans-serif;\n}\n  .results-view .results--results {\n  }\n    .results-view .results--results th {\n      text-align: left;\n    }\n", ""]);
+exports.push([module.i, ".results-view {\n  font-family: Helvetica, Arial, sans-serif;\n}\n  .results-view .results--results {\n  }\n    .results-view .results--results th {\n      text-align: left;\n    }\n    .results-view .results--results td abbr {\n      text-decoration: none;\n    }\n", ""]);
 
 // exports
 
