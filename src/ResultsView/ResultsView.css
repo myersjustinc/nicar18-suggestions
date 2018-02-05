@@ -3,3 +3,9 @@
 }
   .results-view .results--results {
   }
+    .results-view .results--results th {
+      text-align: left;
+    }
+    .results-view .results--results td abbr {
+      text-decoration: none;
+    }

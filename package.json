@@ -22,6 +22,8 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
-    "d3-format": "^1.2.2"
+    "d3-format": "^1.2.2",
+    "dom-delegate": "^2.0.3",
+    "sanitize-html": "^1.17.0"
   }
 }

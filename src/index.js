@@ -2,11 +2,14 @@ import ResultsView from './ResultsView/ResultsView';
 
 const Tabletop = window.Tabletop;
 
+function showDetails(result) {
+  console.log('Showing details for', result);
+}
+
 const resultsElem = document.getElementById('results');
-const resultsView = new ResultsView(resultsElem);
+const resultsView = new ResultsView(resultsElem, showDetails);
 
 function init(data) {
-  console.log(data);
   resultsView.render(data);
 }
 
