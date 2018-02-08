@@ -3,9 +3,16 @@
 }
   .results-view .results--results {
   }
-    .results-view .results--results th {
+    .results-view .results--results th,
+    .results-view .results--results td {
+      padding-right: 1em;
       text-align: left;
+      vertical-align: top;
     }
-    .results-view .results--results td abbr {
-      text-decoration: none;
+    .results-view .results--results th:last-of-type,
+    .results-view .results--results td:last-of-type {
+      padding-right: 0;
     }
+      .results-view .results--results td abbr {
+        text-decoration: none;
+      }
