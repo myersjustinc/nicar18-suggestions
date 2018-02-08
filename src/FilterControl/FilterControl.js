@@ -65,9 +65,7 @@ export default class FilterControl {
       checkedCostInputs, inputElem => inputElem.value);
     return function(result) {
       const resultCost = result['Cost (Approximate, Per Person)'];
-      return acceptableValues.reduce(function(passing, acceptableValue) {
-        return passing || acceptableValues.includes(resultCost);
-      }, false);
+      return acceptableValues.includes(resultCost);
     };
   }
   buildTypeFilter() {
