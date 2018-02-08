@@ -1,6 +1,5 @@
 import { Delegate } from 'dom-delegate';
 
-import apNumber from '../utils/apNumber';
 import formatTimestamp from '../utils/formatTimestamp';
 import sanitizeFormValue from '../utils/sanitizeFormValue';
 
@@ -22,7 +21,6 @@ export default class ResultsView {
     this.elem.innerHTML = resultsHTML;
 
     this.cacheResults(results);
-    this.renderSummary(results);
     this.renderResults(results);
 
     return this;
@@ -127,12 +125,5 @@ export default class ResultsView {
         '</td>',
       '</tr>'
     ].join('');
-  }
-  renderSummary(results) {
-    const resultsCount = results.length;
-    const countElem = this.elem.querySelector('.results--summary--count');
-    const countFormatted = apNumber(resultsCount);
-    const resultUnits = resultsCount === 1 ? 'result' : 'results';
-    countElem.textContent = countFormatted + ' ' + resultUnits;
   }
 }

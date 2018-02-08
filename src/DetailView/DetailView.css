@@ -5,7 +5,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 9001;
+  z-index: 10001;
 }
 .detail-view.detail-view--hidden {
   display: none;

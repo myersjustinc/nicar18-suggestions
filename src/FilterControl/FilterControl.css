@@ -11,6 +11,16 @@
     font-size: 0.875em;
   }
 }
+
+.filter-control .filters--status {
+  background-color: #fff;
+  font-size: 1.142857em;
+  margin: 0;
+  padding: 0.75em;
+  position: relative;
+  z-index: 9010;
+}
+
 .filter-control .filters--filters {
   margin-bottom: 0;
 }
@@ -115,9 +125,6 @@
         position: absolute;
         transition: transform 0.3s;
         top: 0.25em;
-      }
-      .filter-control .filters--collapse input[type="checkbox"]:checked + .filters--collapse--label {
-        box-shadow: unset;
       }
         .filter-control .filters--collapse input[type="checkbox"]:checked + .filters--collapse--label:before {
           transform: rotate(0.5turn) translateY(-0.25em);

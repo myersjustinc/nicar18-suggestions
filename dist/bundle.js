@@ -12692,7 +12692,7 @@ module.exports = exports['default'];
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_defaultLocale__ = __webpack_require__(144);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__src_defaultLocale__ = __webpack_require__(140);
 /* unused harmony reexport formatDefaultLocale */
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_0__src_defaultLocale__["a"]; });
 /* unused harmony reexport formatPrefix */
@@ -12700,11 +12700,11 @@ module.exports = exports['default'];
 /* unused harmony reexport formatLocale */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__src_formatSpecifier__ = __webpack_require__(58);
 /* unused harmony reexport formatSpecifier */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_precisionFixed__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__src_precisionFixed__ = __webpack_require__(146);
 /* unused harmony reexport precisionFixed */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_precisionPrefix__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__src_precisionPrefix__ = __webpack_require__(147);
 /* unused harmony reexport precisionPrefix */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_precisionRound__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__src_precisionRound__ = __webpack_require__(148);
 /* unused harmony reexport precisionRound */
 
 
@@ -12720,12 +12720,12 @@ module.exports = exports['default'];
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exponent__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formatGroup__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__formatNumerals__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formatGroup__ = __webpack_require__(141);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__formatNumerals__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__formatSpecifier__ = __webpack_require__(58);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__formatTypes__ = __webpack_require__(59);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__formatPrefixAuto__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__identity__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__identity__ = __webpack_require__(145);
 
 
 
@@ -12926,9 +12926,9 @@ FormatSpecifier.prototype.toString = function() {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formatDefault__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formatDefault__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__formatPrefixAuto__ = __webpack_require__(60);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__formatRounded__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__formatRounded__ = __webpack_require__(144);
 
 
 
@@ -12984,7 +12984,7 @@ var prefixExponent;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__DetailView_DetailView__ = __webpack_require__(62);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__FilterControl_FilterControl__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ResultsView_ResultsView__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ResultsView_ResultsView__ = __webpack_require__(152);
 
 
 
@@ -25849,7 +25849,7 @@ exports = module.exports = __webpack_require__(28)(false);
 
 
 // module
-exports.push([module.i, ".detail-view {\n  display: block;\n  font-family: Helvetica, Arial, sans-serif;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 9001;\n}\n.detail-view.detail-view--hidden {\n  display: none;\n}\n  .detail-view .detail--modal--background {\n    background-color: #999;\n    background-color: rgba(153, 153, 153, 0.2);\n    left: 0;\n    position: absolute;\n    top: 0;\n    width: 100%;\n  }\n\n  .detail-view .detail--frame {\n    background-color: #fff;\n    border: 1px solid #000;\n    border-radius: 5px;\n    display: block;\n    left: 5%;\n    padding: 1em;\n    position: absolute;\n    top: 2em;\n    width: 80%;\n    z-index: 9002;\n  }\n    .detail-view .detail--close {\n      border-width: 0;\n      cursor: pointer;\n      font-size: 1em;\n      padding: 0.25em 0.5em;\n      position: absolute;\n      right: 0.25em;\n      top: 0.25em;\n    }\n    .detail-view .detail--close:hover {\n      background-color: #aaa;\n    }\n\n    .detail-view .detail--name {\n      font-size: 1.5em;\n      font-weight: bold;\n      margin-top: 0.166667em;\n      max-width: 80%;\n    }\n\n    .detail-view .detail--wrapper {\n      overflow-y: scroll;\n    }\n\n    .detail-view .detail--details th,\n    .detail-view .detail--details td {\n      padding-bottom: 1em;\n      vertical-align: top;\n    }\n    .detail-view .detail--details th {\n      max-width: 10em;\n      padding-right: 1em;\n      text-align: left;\n    }\n", ""]);
+exports.push([module.i, ".detail-view {\n  display: block;\n  font-family: Helvetica, Arial, sans-serif;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 10001;\n}\n.detail-view.detail-view--hidden {\n  display: none;\n}\n  .detail-view .detail--modal--background {\n    background-color: #999;\n    background-color: rgba(153, 153, 153, 0.2);\n    left: 0;\n    position: absolute;\n    top: 0;\n    width: 100%;\n  }\n\n  .detail-view .detail--frame {\n    background-color: #fff;\n    border: 1px solid #000;\n    border-radius: 5px;\n    display: block;\n    left: 5%;\n    padding: 1em;\n    position: absolute;\n    top: 2em;\n    width: 80%;\n    z-index: 9002;\n  }\n    .detail-view .detail--close {\n      border-width: 0;\n      cursor: pointer;\n      font-size: 1em;\n      padding: 0.25em 0.5em;\n      position: absolute;\n      right: 0.25em;\n      top: 0.25em;\n    }\n    .detail-view .detail--close:hover {\n      background-color: #aaa;\n    }\n\n    .detail-view .detail--name {\n      font-size: 1.5em;\n      font-weight: bold;\n      margin-top: 0.166667em;\n      max-width: 80%;\n    }\n\n    .detail-view .detail--wrapper {\n      overflow-y: scroll;\n    }\n\n    .detail-view .detail--details th,\n    .detail-view .detail--details td {\n      padding-bottom: 1em;\n      vertical-align: top;\n    }\n    .detail-view .detail--details th {\n      max-width: 10em;\n      padding-right: 1em;\n      text-align: left;\n    }\n", ""]);
 
 // exports
 
@@ -25956,9 +25956,12 @@ module.exports = function (css) {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_delegate__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_delegate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_dom_delegate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__FilterControl_html__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FilterControl_css__ = __webpack_require__(140);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FilterControl_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__FilterControl_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_apNumber__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__FilterControl_html__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__FilterControl_css__ = __webpack_require__(150);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__FilterControl_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__FilterControl_css__);
+
+
 
 
 
@@ -25976,12 +25979,13 @@ var FilterControl = function FilterControl(elem, callback) {
 FilterControl.prototype.applyFilters = function applyFilters () {
   var filters = this.getActiveFilters();
   var newResults = this.filterResults(filters);
+  this.updateStatus(newResults);
   this.callback(newResults);
 };
 FilterControl.prototype.render = function render () {
   this.bindHandlers();
   this.elem.classList.add('filter-control', 'filters--filters--collapsed');
-  this.elem.innerHTML = __WEBPACK_IMPORTED_MODULE_1__FilterControl_html__["a" /* default */];
+  this.elem.innerHTML = __WEBPACK_IMPORTED_MODULE_2__FilterControl_html__["a" /* default */];
   return this;
 };
 FilterControl.prototype.setResults = function setResults (results) {
@@ -26028,6 +26032,13 @@ FilterControl.prototype.manageCollapse = function manageCollapse () {
     this.$collapseLabel.textContent = 'Collapse filters';
     this.elem.classList.remove('filters--filters--collapsed');
   }
+};
+FilterControl.prototype.updateStatus = function updateStatus (matchingResults) {
+  var resultsCount = matchingResults.length;
+  var countElem = this.elem.querySelector('.filters--results--count');
+  var countFormatted = Object(__WEBPACK_IMPORTED_MODULE_1__utils_apNumber__["a" /* default */])(resultsCount);
+  var resultUnits = resultsCount === 1 ? 'result' : 'results';
+  countElem.textContent = countFormatted + ' ' + resultUnits;
 };
 
 // =-=-=-=-=-=-=-=-=-=-=- FILTER BUILDERS FOLLOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-
@@ -26155,14 +26166,199 @@ FilterControl.prototype.buildTypeFilter = function buildTypeFilter () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ("<form class=\"filters--filters\">\n  <ul class=\"filters--fields\">\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Cost</p>\n      <ul class=\"filters--field--options\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"Free\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"Free\">&#x2205;</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$10 or less\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$10 or less\">$</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$11-20\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$11 to $20\">$$</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$21-30\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$21 to $30\">$$$</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$31 or more\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$31 or more\">$$$$</abbr>\n            </span>\n          </label>\n        </li>\n      </ul>\n    </li>\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Type</p>\n      <ul class=\"filters--field--options\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"Attraction\">\n            <span class=\"filters--field--option--label\">Attraction</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"Bar\">\n            <span class=\"filters--field--option--label\">Bar</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"Restaurant\">\n            <span class=\"filters--field--option--label\">Restaurant</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"\">\n            <span class=\"filters--field--option--label\">Other</span>\n          </label>\n        </li>\n      </ul>\n    </li>\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Getting there</p>\n      <ul class=\"filters--field--options\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Walking distance\">\n            <span class=\"filters--field--option--label\">Walk</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Train\">\n            <span class=\"filters--field--option--label\">Train</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Bus\">\n            <span class=\"filters--field--option--label\">Bus</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Uber/Lyft/Taxi\">\n            <span class=\"filters--field--option--label\">Car</span>\n          </label>\n        </li>\n      </ul>\n    </li>\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Good for</p>\n      <ul class=\"filters--field--options filters--field--options--columns\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Quick lunch\">\n            <span class=\"filters--field--option--label\">Quick lunch</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Leisurely dinner\">\n            <span class=\"filters--field--option--label\">Leisurely dinner</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Big groups\">\n            <span class=\"filters--field--option--label\">Big groups</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Cheap eats\">\n            <span class=\"filters--field--option--label\">Cheap eats</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Cheap drinks\">\n            <span class=\"filters--field--option--label\">Cheap drinks</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Upscale\">\n            <span class=\"filters--field--option--label\">Upscale</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Craft beer\">\n            <span class=\"filters--field--option--label\">Craft beer</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Cocktails\">\n            <span class=\"filters--field--option--label\">Cocktails</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"People who have never been to Chicago\">\n            <span class=\"filters--field--option--label\">\n              People who have never been to Chicago\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"\">\n            <span class=\"filters--field--option--label\">Other</span>\n          </label>\n        </li>\n      </ul>\n    </li>\n  </ul>\n  <div class=\"filters--collapse\">\n    <label>\n      <input type=\"checkbox\" name=\"collapsed\" value=\"true\" checked>\n      <span class=\"filters--collapse--label\">Expand filters</span>\n    </label>\n  </div>\n</form>\n");
+/* harmony export (immutable) */ __webpack_exports__["a"] = apNumber;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_d3_format__ = __webpack_require__(56);
+
+
+var decimalsFormat = Object(__WEBPACK_IMPORTED_MODULE_0_d3_format__["a" /* format */])(',.1f');
+var numeralsFormat = Object(__WEBPACK_IMPORTED_MODULE_0_d3_format__["a" /* format */])(',d');
+var numberSpellings = [
+  'zero', 'one', 'two', 'three', 'four',
+  'five', 'six', 'seven', 'eight', 'nine'];
+
+function apNumber(number) {
+  if (number % 1 !== 0) {
+    return decimalsFormat(number);
+  }
+  if (number >= 0 && number < 10) {
+    return numberSpellings[number];
+  }
+  return numeralsFormat(number);
+}
+
 
 /***/ }),
 /* 140 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return format; });
+/* unused harmony export formatPrefix */
+/* unused harmony export default */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__locale__ = __webpack_require__(57);
+
+
+var locale;
+var format;
+var formatPrefix;
+
+defaultLocale({
+  decimal: ".",
+  thousands: ",",
+  grouping: [3],
+  currency: ["$", ""]
+});
+
+function defaultLocale(definition) {
+  locale = Object(__WEBPACK_IMPORTED_MODULE_0__locale__["a" /* default */])(definition);
+  format = locale.format;
+  formatPrefix = locale.formatPrefix;
+  return locale;
+}
+
+
+/***/ }),
+/* 141 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function(grouping, thousands) {
+  return function(value, width) {
+    var i = value.length,
+        t = [],
+        j = 0,
+        g = grouping[0],
+        length = 0;
+
+    while (i > 0 && g > 0) {
+      if (length + g + 1 > width) g = Math.max(1, width - length);
+      t.push(value.substring(i -= g, i + g));
+      if ((length += g + 1) > width) break;
+      g = grouping[j = (j + 1) % grouping.length];
+    }
+
+    return t.reverse().join(thousands);
+  };
+});
+
+
+/***/ }),
+/* 142 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function(numerals) {
+  return function(value) {
+    return value.replace(/[0-9]/g, function(i) {
+      return numerals[+i];
+    });
+  };
+});
+
+
+/***/ }),
+/* 143 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function(x, p) {
+  x = x.toPrecision(p);
+
+  out: for (var n = x.length, i = 1, i0 = -1, i1; i < n; ++i) {
+    switch (x[i]) {
+      case ".": i0 = i1 = i; break;
+      case "0": if (i0 === 0) i0 = i; i1 = i; break;
+      case "e": break out;
+      default: if (i0 > 0) i0 = 0; break;
+    }
+  }
+
+  return i0 > 0 ? x.slice(0, i0) + x.slice(i1 + 1) : x;
+});
+
+
+/***/ }),
+/* 144 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formatDecimal__ = __webpack_require__(30);
+
+
+/* harmony default export */ __webpack_exports__["a"] = (function(x, p) {
+  var d = Object(__WEBPACK_IMPORTED_MODULE_0__formatDecimal__["a" /* default */])(x, p);
+  if (!d) return x + "";
+  var coefficient = d[0],
+      exponent = d[1];
+  return exponent < 0 ? "0." + new Array(-exponent).join("0") + coefficient
+      : coefficient.length > exponent + 1 ? coefficient.slice(0, exponent + 1) + "." + coefficient.slice(exponent + 1)
+      : coefficient + new Array(exponent - coefficient.length + 2).join("0");
+});
+
+
+/***/ }),
+/* 145 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = (function(x) {
+  return x;
+});
+
+
+/***/ }),
+/* 146 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exponent__ = __webpack_require__(14);
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = (function(step) {
+  return Math.max(0, -Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(Math.abs(step)));
+});
+
+
+/***/ }),
+/* 147 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exponent__ = __webpack_require__(14);
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = (function(step, value) {
+  return Math.max(0, Math.max(-8, Math.min(8, Math.floor(Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(value) / 3))) * 3 - Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(Math.abs(step)));
+});
+
+
+/***/ }),
+/* 148 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exponent__ = __webpack_require__(14);
+
+
+/* unused harmony default export */ var _unused_webpack_default_export = (function(step, max) {
+  step = Math.abs(step), max = Math.abs(max) - step;
+  return Math.max(0, Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(max) - Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(step)) + 1;
+});
+
+
+/***/ }),
+/* 149 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = ("<p class=\"filters--status\">\n  Found <span class=\"filters--results--count\">zero results</span>.\n</p>\n<form class=\"filters--filters\">\n  <ul class=\"filters--fields\">\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Cost</p>\n      <ul class=\"filters--field--options\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"Free\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"Free\">&#x2205;</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$10 or less\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$10 or less\">$</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$11-20\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$11 to $20\">$$</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$21-30\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$21 to $30\">$$$</abbr>\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"cost\" value=\"$31 or more\">\n            <span class=\"filters--field--option--label\">\n              <abbr title=\"$31 or more\">$$$$</abbr>\n            </span>\n          </label>\n        </li>\n      </ul>\n    </li>\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Type</p>\n      <ul class=\"filters--field--options\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"Attraction\">\n            <span class=\"filters--field--option--label\">Attraction</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"Bar\">\n            <span class=\"filters--field--option--label\">Bar</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"Restaurant\">\n            <span class=\"filters--field--option--label\">Restaurant</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"type\" value=\"\">\n            <span class=\"filters--field--option--label\">Other</span>\n          </label>\n        </li>\n      </ul>\n    </li>\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Getting there</p>\n      <ul class=\"filters--field--options\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Walking distance\">\n            <span class=\"filters--field--option--label\">Walk</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Train\">\n            <span class=\"filters--field--option--label\">Train</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Bus\">\n            <span class=\"filters--field--option--label\">Bus</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"transit\" value=\"Uber/Lyft/Taxi\">\n            <span class=\"filters--field--option--label\">Car</span>\n          </label>\n        </li>\n      </ul>\n    </li>\n    <li class=\"filters--field\">\n      <p class=\"filters--field--name\">Good for</p>\n      <ul class=\"filters--field--options filters--field--options--columns\">\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Quick lunch\">\n            <span class=\"filters--field--option--label\">Quick lunch</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Leisurely dinner\">\n            <span class=\"filters--field--option--label\">Leisurely dinner</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Big groups\">\n            <span class=\"filters--field--option--label\">Big groups</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Cheap eats\">\n            <span class=\"filters--field--option--label\">Cheap eats</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Cheap drinks\">\n            <span class=\"filters--field--option--label\">Cheap drinks</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Upscale\">\n            <span class=\"filters--field--option--label\">Upscale</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Craft beer\">\n            <span class=\"filters--field--option--label\">Craft beer</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"Cocktails\">\n            <span class=\"filters--field--option--label\">Cocktails</span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"People who have never been to Chicago\">\n            <span class=\"filters--field--option--label\">\n              People who have never been to Chicago\n            </span>\n          </label>\n        </li>\n        <li class=\"filters--field--option\">\n          <label>\n            <input type=\"checkbox\" name=\"category\" value=\"\">\n            <span class=\"filters--field--option--label\">Other</span>\n          </label>\n        </li>\n      </ul>\n    </li>\n  </ul>\n  <div class=\"filters--collapse\">\n    <label>\n      <input type=\"checkbox\" name=\"collapsed\" value=\"true\" checked>\n      <span class=\"filters--collapse--label\">Expand filters</span>\n    </label>\n  </div>\n</form>\n");
+
+/***/ }),
+/* 150 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(141);
+var content = __webpack_require__(151);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -26208,7 +26404,7 @@ if(false) {
 }
 
 /***/ }),
-/* 141 */
+/* 151 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(28)(false);
@@ -26216,25 +26412,23 @@ exports = module.exports = __webpack_require__(28)(false);
 
 
 // module
-exports.push([module.i, ".filter-control {\n  font-family: Helvetica, Arial, sans-serif;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 9001;\n}\n@media screen and (max-width: 25em) {\n  .filter-control {\n    font-size: 0.875em;\n  }\n}\n.filter-control .filters--filters {\n  margin-bottom: 0;\n}\n  .filter-control .filters--fields,\n  .filter-control .filters--field {\n    list-style-type: none;\n    margin-left: 0;\n    padding-left: 0;\n    text-indent: 0;\n  }\n  .filter-control .filters--fields {\n    background-color: #fff;\n    box-shadow: 0 1px 3px #000;\n    margin-bottom: 0;\n    margin-top: 0;\n    padding: 0.5em;\n    padding-bottom: 1em;\n  }\n  .filter-control .filters--field:not(:last-of-type) {\n    margin-bottom: 1em;\n  }\n    .filter-control .filters--field--name {\n      font-weight: bold;\n      margin-right: 2em;\n      margin-top: 0;\n    }\n    .filter-control .filters--field--name,\n    .filter-control .filters--field--options {\n      display: inline-block;\n      vertical-align: top;\n    }\n    .filter-control .filters--field--options,\n    .filter-control .filters--field--option {\n      list-style-type: none;\n      margin-left: 0;\n      padding-left: 0;\n      text-indent: 0;\n    }\n      .filter-control .filters--field--option {\n        display: inline-block;\n        margin-right: 0.75em;\n        position: relative;\n        vertical-align: top;\n      }\n\n      .filter-control .filters--field--options--columns .filters--field--option {\n        width: 45%;\n      }\n        @media screen and (min-width: 30em) {\n          .filter-control .filters--field--options--columns .filters--field--option {\n            width: 30%;\n          }\n        }\n        @media screen and (min-width: 50em) {\n          .filter-control .filters--field--options--columns .filters--field--option {\n            width: auto;\n          }\n        }\n\n        .filter-control .filters--field--option input[type=\"checkbox\"] {\n          left: 0;\n          position: absolute;\n          top: 0;\n        }\n        .filter-control .filters--field--option--label {\n          display: block;\n          margin-left: 1.5em;\n          vertical-align: top;\n        }\n          .filter-control .filters--field--option--label abbr {\n            text-decoration: none;\n          }\n\n  .filter-control.filters--filters--collapsed .filters--fields {\n    display: none;\n  }\n  .filter-control .filters--collapse {\n    border-top: 1px solid #aaa;\n    text-align: right;\n  }\n    .filter-control .filters--collapse input[type=\"checkbox\"] {\n      display: none;\n    }\n    .filter-control .filters--collapse--label {\n      background-color: #eee;\n      border: 1px solid #aaa;\n      border-top-width: 0;\n      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);\n      color: #666;\n      cursor: pointer;\n      display: inline-block;\n      padding: 0.5em;\n      position: relative;\n      text-align: center;\n      transition: background-color 0.2s, border-color 0.2s, color 0.2s, font-weight 0.2s;\n      width: 8em;\n    }\n      .filter-control .filters--collapse--label:before {\n        color: #aaa;\n        content: '\\2191';\n        left: 0.375em;\n        position: absolute;\n        transition: transform 0.3s;\n        top: 0.25em;\n      }\n      .filter-control .filters--collapse input[type=\"checkbox\"]:checked + .filters--collapse--label {\n        box-shadow: unset;\n      }\n        .filter-control .filters--collapse input[type=\"checkbox\"]:checked + .filters--collapse--label:before {\n          transform: rotate(0.5turn) translateY(-0.25em);\n        }\n", ""]);
+exports.push([module.i, ".filter-control {\n  font-family: Helvetica, Arial, sans-serif;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 9001;\n}\n@media screen and (max-width: 25em) {\n  .filter-control {\n    font-size: 0.875em;\n  }\n}\n\n.filter-control .filters--status {\n  background-color: #fff;\n  font-size: 1.142857em;\n  margin: 0;\n  padding: 0.75em;\n  position: relative;\n  z-index: 9010;\n}\n\n.filter-control .filters--filters {\n  margin-bottom: 0;\n}\n  .filter-control .filters--fields,\n  .filter-control .filters--field {\n    list-style-type: none;\n    margin-left: 0;\n    padding-left: 0;\n    text-indent: 0;\n  }\n  .filter-control .filters--fields {\n    background-color: #fff;\n    box-shadow: 0 1px 3px #000;\n    margin-bottom: 0;\n    margin-top: 0;\n    padding: 0.5em;\n    padding-bottom: 1em;\n  }\n  .filter-control .filters--field:not(:last-of-type) {\n    margin-bottom: 1em;\n  }\n    .filter-control .filters--field--name {\n      font-weight: bold;\n      margin-right: 2em;\n      margin-top: 0;\n    }\n    .filter-control .filters--field--name,\n    .filter-control .filters--field--options {\n      display: inline-block;\n      vertical-align: top;\n    }\n    .filter-control .filters--field--options,\n    .filter-control .filters--field--option {\n      list-style-type: none;\n      margin-left: 0;\n      padding-left: 0;\n      text-indent: 0;\n    }\n      .filter-control .filters--field--option {\n        display: inline-block;\n        margin-right: 0.75em;\n        position: relative;\n        vertical-align: top;\n      }\n\n      .filter-control .filters--field--options--columns .filters--field--option {\n        width: 45%;\n      }\n        @media screen and (min-width: 30em) {\n          .filter-control .filters--field--options--columns .filters--field--option {\n            width: 30%;\n          }\n        }\n        @media screen and (min-width: 50em) {\n          .filter-control .filters--field--options--columns .filters--field--option {\n            width: auto;\n          }\n        }\n\n        .filter-control .filters--field--option input[type=\"checkbox\"] {\n          left: 0;\n          position: absolute;\n          top: 0;\n        }\n        .filter-control .filters--field--option--label {\n          display: block;\n          margin-left: 1.5em;\n          vertical-align: top;\n        }\n          .filter-control .filters--field--option--label abbr {\n            text-decoration: none;\n          }\n\n  .filter-control.filters--filters--collapsed .filters--fields {\n    display: none;\n  }\n  .filter-control .filters--collapse {\n    border-top: 1px solid #aaa;\n    text-align: right;\n  }\n    .filter-control .filters--collapse input[type=\"checkbox\"] {\n      display: none;\n    }\n    .filter-control .filters--collapse--label {\n      background-color: #eee;\n      border: 1px solid #aaa;\n      border-top-width: 0;\n      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);\n      color: #666;\n      cursor: pointer;\n      display: inline-block;\n      padding: 0.5em;\n      position: relative;\n      text-align: center;\n      transition: background-color 0.2s, border-color 0.2s, color 0.2s, font-weight 0.2s;\n      width: 8em;\n    }\n      .filter-control .filters--collapse--label:before {\n        color: #aaa;\n        content: '\\2191';\n        left: 0.375em;\n        position: absolute;\n        transition: transform 0.3s;\n        top: 0.25em;\n      }\n        .filter-control .filters--collapse input[type=\"checkbox\"]:checked + .filters--collapse--label:before {\n          transform: rotate(0.5turn) translateY(-0.25em);\n        }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 142 */
+/* 152 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_delegate__ = __webpack_require__(15);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_dom_delegate___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_dom_delegate__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_apNumber__ = __webpack_require__(143);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_formatTimestamp__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_sanitizeFormValue__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ResultsView_html__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ResultsView_css__ = __webpack_require__(155);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ResultsView_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5__ResultsView_css__);
-
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__utils_formatTimestamp__ = __webpack_require__(153);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_sanitizeFormValue__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ResultsView_html__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ResultsView_css__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ResultsView_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__ResultsView_css__);
 
 
 
@@ -26254,10 +26448,9 @@ var ResultsView = function ResultsView(elem, showDetails) {
 ResultsView.prototype.render = function render (results) {
   this.bindHandlers();
   this.elem.classList.add('results-view');
-  this.elem.innerHTML = __WEBPACK_IMPORTED_MODULE_4__ResultsView_html__["a" /* default */];
+  this.elem.innerHTML = __WEBPACK_IMPORTED_MODULE_3__ResultsView_html__["a" /* default */];
 
   this.cacheResults(results);
-  this.renderSummary(results);
   this.renderResults(results);
 
   return this;
@@ -26275,7 +26468,7 @@ ResultsView.prototype.bindHandlers = function bindHandlers () {
 ResultsView.prototype.cacheResults = function cacheResults (results) {
   var cached = {};
   results.forEach(function (result) {
-    var timestamp = Object(__WEBPACK_IMPORTED_MODULE_2__utils_formatTimestamp__["a" /* default */])(result.Timestamp);
+    var timestamp = Object(__WEBPACK_IMPORTED_MODULE_1__utils_formatTimestamp__["a" /* default */])(result.Timestamp);
     result._lookupTimestamp = timestamp;
     cached[timestamp] = result;
   });
@@ -26350,9 +26543,9 @@ ResultsView.prototype.renderRow = function renderRow (result) {
     '<tr>',
       '<td class="results--result--name">',
         '<a class="results--result--show-detail" href="#',
-          Object(__WEBPACK_IMPORTED_MODULE_2__utils_formatTimestamp__["a" /* default */])(result.Timestamp),
+          Object(__WEBPACK_IMPORTED_MODULE_1__utils_formatTimestamp__["a" /* default */])(result.Timestamp),
         '">',
-          Object(__WEBPACK_IMPORTED_MODULE_3__utils_sanitizeFormValue__["a" /* default */])(result['Recommendation Name']),
+          Object(__WEBPACK_IMPORTED_MODULE_2__utils_sanitizeFormValue__["a" /* default */])(result['Recommendation Name']),
         '</a>',
       '</td>',
       '<td class="results--result--cost">',
@@ -26364,200 +26557,8 @@ ResultsView.prototype.renderRow = function renderRow (result) {
     '</tr>'
   ].join('');
 };
-ResultsView.prototype.renderSummary = function renderSummary (results) {
-  var resultsCount = results.length;
-  var countElem = this.elem.querySelector('.results--summary--count');
-  var countFormatted = Object(__WEBPACK_IMPORTED_MODULE_1__utils_apNumber__["a" /* default */])(resultsCount);
-  var resultUnits = resultsCount === 1 ? 'result' : 'results';
-  countElem.textContent = countFormatted + ' ' + resultUnits;
-};
 
 /* harmony default export */ __webpack_exports__["a"] = (ResultsView);
-
-
-/***/ }),
-/* 143 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (immutable) */ __webpack_exports__["a"] = apNumber;
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_d3_format__ = __webpack_require__(56);
-
-
-var decimalsFormat = Object(__WEBPACK_IMPORTED_MODULE_0_d3_format__["a" /* format */])(',.1f');
-var numeralsFormat = Object(__WEBPACK_IMPORTED_MODULE_0_d3_format__["a" /* format */])(',d');
-var numberSpellings = [
-  'zero', 'one', 'two', 'three', 'four',
-  'five', 'six', 'seven', 'eight', 'nine'];
-
-function apNumber(number) {
-  if (number % 1 !== 0) {
-    return decimalsFormat(number);
-  }
-  if (number >= 0 && number < 10) {
-    return numberSpellings[number];
-  }
-  return numeralsFormat(number);
-}
-
-
-/***/ }),
-/* 144 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return format; });
-/* unused harmony export formatPrefix */
-/* unused harmony export default */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__locale__ = __webpack_require__(57);
-
-
-var locale;
-var format;
-var formatPrefix;
-
-defaultLocale({
-  decimal: ".",
-  thousands: ",",
-  grouping: [3],
-  currency: ["$", ""]
-});
-
-function defaultLocale(definition) {
-  locale = Object(__WEBPACK_IMPORTED_MODULE_0__locale__["a" /* default */])(definition);
-  format = locale.format;
-  formatPrefix = locale.formatPrefix;
-  return locale;
-}
-
-
-/***/ }),
-/* 145 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function(grouping, thousands) {
-  return function(value, width) {
-    var i = value.length,
-        t = [],
-        j = 0,
-        g = grouping[0],
-        length = 0;
-
-    while (i > 0 && g > 0) {
-      if (length + g + 1 > width) g = Math.max(1, width - length);
-      t.push(value.substring(i -= g, i + g));
-      if ((length += g + 1) > width) break;
-      g = grouping[j = (j + 1) % grouping.length];
-    }
-
-    return t.reverse().join(thousands);
-  };
-});
-
-
-/***/ }),
-/* 146 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function(numerals) {
-  return function(value) {
-    return value.replace(/[0-9]/g, function(i) {
-      return numerals[+i];
-    });
-  };
-});
-
-
-/***/ }),
-/* 147 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function(x, p) {
-  x = x.toPrecision(p);
-
-  out: for (var n = x.length, i = 1, i0 = -1, i1; i < n; ++i) {
-    switch (x[i]) {
-      case ".": i0 = i1 = i; break;
-      case "0": if (i0 === 0) i0 = i; i1 = i; break;
-      case "e": break out;
-      default: if (i0 > 0) i0 = 0; break;
-    }
-  }
-
-  return i0 > 0 ? x.slice(0, i0) + x.slice(i1 + 1) : x;
-});
-
-
-/***/ }),
-/* 148 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__formatDecimal__ = __webpack_require__(30);
-
-
-/* harmony default export */ __webpack_exports__["a"] = (function(x, p) {
-  var d = Object(__WEBPACK_IMPORTED_MODULE_0__formatDecimal__["a" /* default */])(x, p);
-  if (!d) return x + "";
-  var coefficient = d[0],
-      exponent = d[1];
-  return exponent < 0 ? "0." + new Array(-exponent).join("0") + coefficient
-      : coefficient.length > exponent + 1 ? coefficient.slice(0, exponent + 1) + "." + coefficient.slice(exponent + 1)
-      : coefficient + new Array(exponent - coefficient.length + 2).join("0");
-});
-
-
-/***/ }),
-/* 149 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony default export */ __webpack_exports__["a"] = (function(x) {
-  return x;
-});
-
-
-/***/ }),
-/* 150 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exponent__ = __webpack_require__(14);
-
-
-/* unused harmony default export */ var _unused_webpack_default_export = (function(step) {
-  return Math.max(0, -Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(Math.abs(step)));
-});
-
-
-/***/ }),
-/* 151 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exponent__ = __webpack_require__(14);
-
-
-/* unused harmony default export */ var _unused_webpack_default_export = (function(step, value) {
-  return Math.max(0, Math.max(-8, Math.min(8, Math.floor(Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(value) / 3))) * 3 - Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(Math.abs(step)));
-});
-
-
-/***/ }),
-/* 152 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exponent__ = __webpack_require__(14);
-
-
-/* unused harmony default export */ var _unused_webpack_default_export = (function(step, max) {
-  step = Math.abs(step), max = Math.abs(max) - step;
-  return Math.max(0, Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(max) - Object(__WEBPACK_IMPORTED_MODULE_0__exponent__["a" /* default */])(step)) + 1;
-});
 
 
 /***/ }),
@@ -26585,7 +26586,7 @@ function formatTimestamp(rawTimestamp) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony default export */ __webpack_exports__["a"] = ("<p class=\"results--summary\">\n  Found <span class=\"results--summary--count\"></span>.\n</p>\n<table class=\"results--results\">\n  <thead>\n    <tr>\n      <th class=\"results--result--name\">Name</th>\n      <th class=\"results--result--cost\">Cost</th>\n      <th class=\"results--result--transit\">Getting there</th>\n    </tr>\n  </thead>\n  <tbody>\n  </tbody>\n</table>\n");
+/* harmony default export */ __webpack_exports__["a"] = ("<table class=\"results--results\">\n  <thead>\n    <tr>\n      <th class=\"results--result--name\">Name</th>\n      <th class=\"results--result--cost\">Cost</th>\n      <th class=\"results--result--transit\">Getting there</th>\n    </tr>\n  </thead>\n  <tbody>\n  </tbody>\n</table>\n");
 
 /***/ }),
 /* 155 */
@@ -26646,7 +26647,7 @@ exports = module.exports = __webpack_require__(28)(false);
 
 
 // module
-exports.push([module.i, ".results-view {\n  font-family: Helvetica, Arial, sans-serif;\n}\n  .results-view .results--results {\n    width: 100%;\n  }\n    .results-view .results--results th,\n    .results-view .results--results td {\n      padding-right: 1em;\n      text-align: left;\n      vertical-align: top;\n    }\n    .results-view .results--results th:last-of-type,\n    .results-view .results--results td:last-of-type {\n      padding-right: 0;\n    }\n      .results-view .results--results td abbr {\n        text-decoration: none;\n      }\n", ""]);
+exports.push([module.i, ".results-view {\n  font-family: Helvetica, Arial, sans-serif;\n  margin-top: 5.5em;\n}\n  .results-view .results--results {\n    width: 100%;\n  }\n    .results-view .results--results th,\n    .results-view .results--results td {\n      padding-right: 1em;\n      text-align: left;\n      vertical-align: top;\n    }\n    .results-view .results--results th:last-of-type,\n    .results-view .results--results td:last-of-type {\n      padding-right: 0;\n    }\n      .results-view .results--results td abbr {\n        text-decoration: none;\n      }\n", ""]);
 
 // exports
 

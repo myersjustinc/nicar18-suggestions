@@ -1,5 +1,7 @@
 import { Delegate } from 'dom-delegate';
 
+import apNumber from '../utils/apNumber';
+
 import filterHTML from './FilterControl.html';
 import filterCSS from './FilterControl.css';  // jshint unused:false
 
@@ -16,6 +18,7 @@ export default class FilterControl {
   applyFilters() {
     const filters = this.getActiveFilters();
     const newResults = this.filterResults(filters);
+    this.updateStatus(newResults);
     this.callback(newResults);
   }
   render() {
@@ -68,6 +71,13 @@ export default class FilterControl {
       this.$collapseLabel.textContent = 'Collapse filters';
       this.elem.classList.remove('filters--filters--collapsed');
     }
+  }
+  updateStatus(matchingResults) {
+    const resultsCount = matchingResults.length;
+    const countElem = this.elem.querySelector('.filters--results--count');
+    const countFormatted = apNumber(resultsCount);
+    const resultUnits = resultsCount === 1 ? 'result' : 'results';
+    countElem.textContent = countFormatted + ' ' + resultUnits;
   }
 
   // =-=-=-=-=-=-=-=-=-=-=- FILTER BUILDERS FOLLOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-
