@@ -1,7 +1,6 @@
 /* globals __dirname, module, require */
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const path = require('path');
-const UglifyJsPlugin = require('webpack').optimize.UglifyJsPlugin;
 
 module.exports = {
   entry: './src/index.js',
@@ -48,8 +47,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {exclude: ['index.html']}),
-    new UglifyJsPlugin({sourceMap: true})
+    new CleanWebpackPlugin(['dist'], {exclude: ['index.html']})
   ],
   devtool: 'source-map',
   target: 'web'
