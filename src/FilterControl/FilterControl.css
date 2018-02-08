@@ -6,6 +6,11 @@
   width: 100%;
   z-index: 9001;
 }
+@media screen and (max-width: 25em) {
+  .filter-control {
+    font-size: 0.875em;
+  }
+}
 .filter-control .filters--filters {
   margin-bottom: 0;
 }
@@ -75,6 +80,9 @@
           margin-left: 1.5em;
           vertical-align: top;
         }
+          .filter-control .filters--field--option--label abbr {
+            text-decoration: none;
+          }
 
   .filter-control.filters--filters--collapsed .filters--fields {
     display: none;
