@@ -45,7 +45,8 @@ export default class FilterControl {
   }
   getActiveFilters() {
     return [
-      this.buildCostFilter()
+      this.buildCostFilter(),
+      this.buildTypeFilter()
     ];
   }
 
@@ -66,6 +67,48 @@ export default class FilterControl {
       const resultCost = result['Cost (Approximate, Per Person)'];
       return acceptableValues.reduce(function(passing, acceptableValue) {
         return passing || acceptableValues.includes(resultCost);
+      }, false);
+    };
+  }
+  buildTypeFilter() {
+    const checkedTypeInputs = this.elem.querySelectorAll(
+      '.filters--field--option input[name="type"]:checked');
+
+    // Allow anything if we haven't checked any type options.
+    if (!checkedTypeInputs.length) {
+      return (result => true);
+    }
+
+    function stringToRegExp(inputValue) {
+      if (inputValue === '') {
+        return null;  // We'll deal with this later.
+      }
+      return new RegExp('(^|[\\b\\/])' + inputValue + '($|[\\b\\/])');
+    }
+
+    const acceptableValues = Array.prototype.map.call(
+      checkedTypeInputs, inputElem => inputElem.value.trim());
+    const acceptableExps = acceptableValues.map(
+      stringToRegExp).filter(exp => exp != null);
+    let typeTestFunctions = acceptableExps.map(exp => exp.test.bind(exp));
+
+    if (acceptableValues.includes('')) {
+      const nonEmptyInputs = this.elem.querySelectorAll(
+        '.filters--field--option input[name="type"]:not([value=""])');
+      const nonEmptyValues = Array.prototype.map.call(
+        nonEmptyInputs, inputElem => inputElem.value.trim());
+      const nonEmptyExps = nonEmptyValues.map(stringToRegExp);
+      typeTestFunctions.push(function(resultType) {
+        return nonEmptyExps.reduce(function(passing, nonEmptyExp) {
+          return passing && !nonEmptyExp.test(resultType);
+        }, true);
+      });
+    }
+
+    return function(result) {
+      const resultType = result.Type;
+      return typeTestFunctions.reduce(function(passing, typeTestFunction) {
+        return passing || typeTestFunction(resultType);
       }, false);
     };
   }
