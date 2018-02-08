@@ -65,3 +65,24 @@
       padding-right: 1em;
       text-align: left;
     }
+
+@media screen and (max-width: 25em) {
+  .detail-view {
+    font-size: 0.875em;
+  }
+    .detail-view .detail--details,
+    .detail-view .detail--details tbody,
+    .detail-view .detail--details tr,
+    .detail-view .detail--details th,
+    .detail-view .detail--details td {
+      display: block;
+    }
+      .detail-view .detail--details th {
+        padding-bottom: 0.5em;
+        padding-right: 0;
+      }
+      .detail-view .detail--details td {
+        padding-left: 1em;
+        padding-bottom: 1.5em;
+      }
+}

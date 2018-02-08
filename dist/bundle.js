@@ -13074,7 +13074,11 @@ DetailView.prototype.show = function show () {
     '.detail--modal--background');
   var tableWrapper = this.elem.querySelector('.detail--wrapper');
   modalBackground.style.height = window.innerHeight + 'px';
-  tableWrapper.style.maxHeight = (window.innerHeight * 0.7) + 'px';
+  if (window.innerWidth <= 600) {
+    tableWrapper.style.maxHeight = (window.innerHeight * 0.6) + 'px';
+  } else {
+    tableWrapper.style.maxHeight = (window.innerHeight * 0.8) + 'px';
+  }
   this.elem.classList.remove('detail-view--hidden');
 };
 
@@ -25863,7 +25867,7 @@ exports = module.exports = __webpack_require__(28)(false);
 
 
 // module
-exports.push([module.i, ".detail-view {\n  display: block;\n  font-family: Helvetica, Arial, sans-serif;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 10001;\n}\n.detail-view.detail-view--hidden {\n  display: none;\n}\n  .detail-view .detail--modal--background {\n    background-color: #999;\n    background-color: rgba(153, 153, 153, 0.2);\n    left: 0;\n    position: absolute;\n    top: 0;\n    width: 100%;\n  }\n\n  .detail-view .detail--frame {\n    background-color: #fff;\n    border: 1px solid #000;\n    border-radius: 5px;\n    display: block;\n    left: 5%;\n    padding: 1em;\n    position: absolute;\n    top: 2em;\n    width: 80%;\n    z-index: 9002;\n  }\n    .detail-view .detail--close {\n      border-width: 0;\n      cursor: pointer;\n      font-size: 1em;\n      padding: 0.25em 0.5em;\n      position: absolute;\n      right: 0.25em;\n      top: 0.25em;\n    }\n    .detail-view .detail--close:hover {\n      background-color: #aaa;\n    }\n\n    .detail-view .detail--name {\n      font-size: 1.5em;\n      font-weight: bold;\n      margin-top: 0.166667em;\n      max-width: 80%;\n    }\n\n    .detail-view .detail--wrapper {\n      overflow-y: scroll;\n    }\n\n    .detail-view .detail--details th,\n    .detail-view .detail--details td {\n      padding-bottom: 1em;\n      vertical-align: top;\n    }\n    .detail-view .detail--details th {\n      max-width: 10em;\n      padding-right: 1em;\n      text-align: left;\n    }\n", ""]);
+exports.push([module.i, ".detail-view {\n  display: block;\n  font-family: Helvetica, Arial, sans-serif;\n  left: 0;\n  position: fixed;\n  top: 0;\n  width: 100%;\n  z-index: 10001;\n}\n.detail-view.detail-view--hidden {\n  display: none;\n}\n  .detail-view .detail--modal--background {\n    background-color: #999;\n    background-color: rgba(153, 153, 153, 0.2);\n    left: 0;\n    position: absolute;\n    top: 0;\n    width: 100%;\n  }\n\n  .detail-view .detail--frame {\n    background-color: #fff;\n    border: 1px solid #000;\n    border-radius: 5px;\n    display: block;\n    left: 5%;\n    padding: 1em;\n    position: absolute;\n    top: 2em;\n    width: 80%;\n    z-index: 9002;\n  }\n    .detail-view .detail--close {\n      border-width: 0;\n      cursor: pointer;\n      font-size: 1em;\n      padding: 0.25em 0.5em;\n      position: absolute;\n      right: 0.25em;\n      top: 0.25em;\n    }\n    .detail-view .detail--close:hover {\n      background-color: #aaa;\n    }\n\n    .detail-view .detail--name {\n      font-size: 1.5em;\n      font-weight: bold;\n      margin-top: 0.166667em;\n      max-width: 80%;\n    }\n\n    .detail-view .detail--wrapper {\n      overflow-y: scroll;\n    }\n\n    .detail-view .detail--details th,\n    .detail-view .detail--details td {\n      padding-bottom: 1em;\n      vertical-align: top;\n    }\n    .detail-view .detail--details th {\n      max-width: 10em;\n      padding-right: 1em;\n      text-align: left;\n    }\n\n@media screen and (max-width: 25em) {\n  .detail-view {\n    font-size: 0.875em;\n  }\n    .detail-view .detail--details,\n    .detail-view .detail--details tbody,\n    .detail-view .detail--details tr,\n    .detail-view .detail--details th,\n    .detail-view .detail--details td {\n      display: block;\n    }\n      .detail-view .detail--details th {\n        padding-bottom: 0.5em;\n        padding-right: 0;\n      }\n      .detail-view .detail--details td {\n        padding-left: 1em;\n        padding-bottom: 1.5em;\n      }\n}\n", ""]);
 
 // exports
 

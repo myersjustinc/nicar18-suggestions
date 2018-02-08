@@ -29,7 +29,11 @@ export default class DetailView {
       '.detail--modal--background');
     const tableWrapper = this.elem.querySelector('.detail--wrapper');
     modalBackground.style.height = window.innerHeight + 'px';
-    tableWrapper.style.maxHeight = (window.innerHeight * 0.7) + 'px';
+    if (window.innerWidth <= 600) {
+      tableWrapper.style.maxHeight = (window.innerHeight * 0.6) + 'px';
+    } else {
+      tableWrapper.style.maxHeight = (window.innerHeight * 0.8) + 'px';
+    }
     this.elem.classList.remove('detail-view--hidden');
   }
 
