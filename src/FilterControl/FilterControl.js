@@ -18,7 +18,7 @@ export default class FilterControl {
     const newResults = this.filterResults(filters);
     this.callback(newResults);
   }
-  render(results) {
+  render() {
     this.bindHandlers();
     this.elem.classList.add('filter-control', 'filters--filters--collapsed');
     this.elem.innerHTML = filterHTML;

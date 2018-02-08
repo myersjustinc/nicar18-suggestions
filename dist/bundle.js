@@ -25978,7 +25978,7 @@ FilterControl.prototype.applyFilters = function applyFilters () {
   var newResults = this.filterResults(filters);
   this.callback(newResults);
 };
-FilterControl.prototype.render = function render (results) {
+FilterControl.prototype.render = function render () {
   this.bindHandlers();
   this.elem.classList.add('filter-control', 'filters--filters--collapsed');
   this.elem.innerHTML = __WEBPACK_IMPORTED_MODULE_1__FilterControl_html__["a" /* default */];
