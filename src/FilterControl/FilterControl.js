@@ -45,6 +45,7 @@ export default class FilterControl {
   }
   getActiveFilters() {
     return [
+      this.buildCategoryFilter(),
       this.buildCostFilter(),
       this.buildTransitFilter(),
       this.buildTypeFilter()
@@ -53,6 +54,41 @@ export default class FilterControl {
 
   // =-=-=-=-=-=-=-=-=-=-=- FILTER BUILDERS FOLLOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
+  buildCategoryFilter() {
+    const checkedCategoryInputs = this.elem.querySelectorAll(
+      '.filters--field--option input[name="category"]:checked');
+
+    // Allow anything if we haven't checked any type options.
+    if (!checkedCategoryInputs.length) {
+      return (result => true);
+    }
+
+    const acceptableValues = Array.prototype.map.call(
+      checkedCategoryInputs, inputElem => inputElem.value.trim());
+    let categoryTestFunctions = acceptableValues.filter(
+      value => value !== '').map(value => (function(resultCategory) {
+        return resultCategory.includes(value);
+      }));
+
+    if (acceptableValues.includes('')) {
+      const nonEmptyInputs = this.elem.querySelectorAll(
+        '.filters--field--option input[name="category"]:not([value=""])');
+      const nonEmptyValues = Array.prototype.map.call(
+        nonEmptyInputs, inputElem => inputElem.value.trim());
+      categoryTestFunctions.push(function(resultCategory) {
+        return nonEmptyValues.reduce(function(passing, nonEmptyValue) {
+          return passing && !resultCategory.includes(nonEmptyValue);
+        }, true);
+      });
+    }
+
+    return function(result) {
+      const resultCategory = result['Good for...'];
+      return categoryTestFunctions.reduce(function(passing, testFunction) {
+        return passing || testFunction(resultCategory);
+      }, false);
+    };
+  }
   buildCostFilter() {
     const checkedCostInputs = this.elem.querySelectorAll(
       '.filters--field--option input[name="cost"]:checked');

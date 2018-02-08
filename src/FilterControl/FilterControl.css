@@ -34,4 +34,31 @@
       .filter-control .filters--field--option {
         display: inline-block;
         margin-right: 0.75em;
+        position: relative;
+        vertical-align: top;
       }
+
+      .filter-control .filters--field--options--columns .filters--field--option {
+        width: 45%;
+      }
+        @media screen and (min-width: 30em) {
+          .filter-control .filters--field--options--columns .filters--field--option {
+            width: 30%;
+          }
+        }
+        @media screen and (min-width: 50em) {
+          .filter-control .filters--field--options--columns .filters--field--option {
+            width: auto;
+          }
+        }
+
+        .filter-control .filters--field--option input[type="checkbox"] {
+          left: 0;
+          position: absolute;
+          top: 0;
+        }
+        .filter-control .filters--field--option--label {
+          display: block;
+          margin-left: 1.5em;
+          vertical-align: top;
+        }
