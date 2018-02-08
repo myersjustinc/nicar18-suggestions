@@ -1,5 +1,6 @@
 import { Delegate } from 'dom-delegate';
 
+import generateMapLink from '../utils/generateMapLink';
 import sanitizeFormValue from '../utils/sanitizeFormValue';
 
 import detailHTML from './DetailView.html';
@@ -55,7 +56,6 @@ export default class DetailView {
     fillProperty('How to get there?', '.detail--details--transit');
     fillProperty('Recommender', '.detail--details--credit');
     this.elem.querySelector('.detail--details--location--link').href = (
-      'https://www.google.com/maps/search/?api=1&query=' +
-      encodeURIComponent(result.Location));
+      generateMapLink(result.Location));
   }
 }

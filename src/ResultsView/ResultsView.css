@@ -18,3 +18,12 @@
       .results-view .results--results td abbr {
         text-decoration: none;
       }
+
+    .results-view .results--result--map a,
+    .results-view .results--result--map abbr {
+      text-decoration: none;
+    }
+    .results-view .results--result--map abbr {
+      display: inline-block;
+      transform: scaleX(-1);
+    }

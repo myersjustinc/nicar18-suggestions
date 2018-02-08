@@ -1,6 +1,7 @@
 import { Delegate } from 'dom-delegate';
 
 import formatTimestamp from '../utils/formatTimestamp';
+import generateMapLink from '../utils/generateMapLink';
 import sanitizeFormValue from '../utils/sanitizeFormValue';
 
 import resultsHTML from './ResultsView.html';
@@ -122,6 +123,14 @@ export default class ResultsView {
         '</td>',
         '<td class="results--result--transit">',
           this.formatTransit(result['How to get there?']),
+        '</td>',
+        '<td class="results--result--map">',
+          '<a ',
+            'href="', generateMapLink(result.Location),'" ',
+            'target="_blank" rel="noopener noreferrer"',
+          '>',
+            '<abbr title="Open map in new window">&#x21f1;</abbr>',
+          '</a>',
         '</td>',
       '</tr>'
     ].join('');
