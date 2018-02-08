@@ -20,7 +20,7 @@ export default class FilterControl {
   }
   render(results) {
     this.bindHandlers();
-    this.elem.classList.add('filter-control');
+    this.elem.classList.add('filter-control', 'filters--filters--collapsed');
     this.elem.innerHTML = filterHTML;
     return this;
   }
@@ -32,7 +32,9 @@ export default class FilterControl {
 
   bindHandlers() {
     const delegate = new Delegate(document.body);
-    delegate.on('change', '.filters--filters', this.applyFilters.bind(this));
+    delegate.on('change', '.filters--fields', this.applyFilters.bind(this));
+    delegate.on(
+      'change', '.filters--collapse', this.manageCollapse.bind(this));
     this.handlersBound = true;
   }
   filterResults(filters) {
@@ -50,6 +52,22 @@ export default class FilterControl {
       this.buildTransitFilter(),
       this.buildTypeFilter()
     ];
+  }
+  manageCollapse() {
+    if (this.$collapseInput == null) {
+      this.$collapseInput = this.elem.querySelector(
+        '.filters--collapse input[name="collapsed"]');
+      this.$collapseLabel = this.elem.querySelector(
+        '.filters--collapse--label');
+    }
+
+    if (this.$collapseInput.checked) {
+      this.$collapseLabel.textContent = 'Expand filters';
+      this.elem.classList.add('filters--filters--collapsed');
+    } else {
+      this.$collapseLabel.textContent = 'Collapse filters';
+      this.elem.classList.remove('filters--filters--collapsed');
+    }
   }
 
   // =-=-=-=-=-=-=-=-=-=-=- FILTER BUILDERS FOLLOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-
