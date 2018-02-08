@@ -46,6 +46,7 @@ export default class FilterControl {
   getActiveFilters() {
     return [
       this.buildCostFilter(),
+      this.buildTransitFilter(),
       this.buildTypeFilter()
     ];
   }
@@ -66,6 +67,27 @@ export default class FilterControl {
     return function(result) {
       const resultCost = result['Cost (Approximate, Per Person)'];
       return acceptableValues.includes(resultCost);
+    };
+  }
+  buildTransitFilter() {
+    const checkedTransitInputs = this.elem.querySelectorAll(
+      '.filters--field--option input[name="transit"]:checked');
+
+    // Allow anything if we haven't checked any cost options.
+    if (!checkedTransitInputs.length) {
+      return (result => true);
+    }
+
+    const acceptableValues = Array.prototype.map.call(
+      checkedTransitInputs, inputElem => inputElem.value);
+    const acceptableExps = acceptableValues.map(function(inputValue) {
+      return new RegExp('\\b' + inputValue.replace(/\//g, '\\/') + '\\b');
+    });
+    return function(result) {
+      const resultCost = result['How to get there?'];
+      return acceptableExps.reduce(function(passing, acceptableExp) {
+        return passing || acceptableExp.test(resultCost);
+      }, false);
     };
   }
   buildTypeFilter() {
