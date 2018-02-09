@@ -7,21 +7,27 @@ import detailHTML from './DetailView.html';
 import detailCSS from './DetailView.css';  // jshint unused:false
 
 export default class DetailView {
-  constructor(elem) {
+  constructor(elem, onShow, onHide) {
     this.elem = elem;
     this.handlersBound = false;
+
+    function noop() {}
+    this.onShow = onShow || noop;
+    this.onHide = onHide || noop;
   }
 
   // =-=-=-=-=-=-=-=-=-=-=-= PUBLIC METHODS FOLLOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
   hide() {
     this.elem.classList.add('detail-view--hidden');
+    this.onHide();
   }
   render(result) {
     this.bindHandlers();
     this.elem.classList.add('detail-view');
     this.elem.innerHTML = detailHTML;
     this.renderResult(result);
+    this.result = result;
     return this;
   }
   show() {
@@ -35,6 +41,7 @@ export default class DetailView {
       tableWrapper.style.maxHeight = (window.innerHeight * 0.8) + 'px';
     }
     this.elem.classList.remove('detail-view--hidden');
+    this.onShow(this.result);
   }
 
   // =-=-=-=-=-=-=-=-=-=-=- INTERNAL METHODS FOLLOW -=-=-=-=-=-=-=-=-=-=-=-=-=-

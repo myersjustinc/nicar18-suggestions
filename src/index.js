@@ -1,11 +1,21 @@
 import DetailView from './DetailView/DetailView';
 import FilterControl from './FilterControl/FilterControl';
 import ResultsView from './ResultsView/ResultsView';
+import Router from './Router';
 
 const Tabletop = window.Tabletop;
 
+const router = new Router();
+function onShowDetail(result) {
+  router.navigate(result._lookupTimestamp, {trigger: false, replace: true});
+}
+function onHideDetail() {
+  router.navigate('', {trigger: false, replace: true});
+}
+
 const detailElem = document.getElementById('detail');
-const detailView = new DetailView(detailElem);
+const detailView = new DetailView(detailElem, onShowDetail, onHideDetail);
+router.detailView = detailView;
 
 function showDetails(result) {
   detailView.render(result);
@@ -44,6 +54,8 @@ function init(data) {
   const sorted = initialSort(data);
   filterControl.setResults(sorted);
   filterControl.applyFilters();
+  router.resultsByTimestamp = resultsView.results;
+  router.history.start({pushState: false});
 }
 
 Tabletop.init({

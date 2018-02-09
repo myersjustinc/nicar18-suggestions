@@ -22,6 +22,7 @@
     "webpack": "^3.10.0"
   },
   "dependencies": {
+    "ampersand-router": "^5.0.0",
     "anchorme": "^1.1.2",
     "d3-format": "^1.2.2",
     "dom-delegate": "^2.0.3",
