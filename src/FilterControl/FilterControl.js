@@ -19,6 +19,7 @@ export default class FilterControl {
     const filters = this.getActiveFilters();
     const newResults = this.filterResults(filters);
     this.updateStatus(newResults);
+    this.updateClearButton();
     this.callback(newResults);
   }
   render() {
@@ -38,7 +39,17 @@ export default class FilterControl {
     delegate.on('change', '.filters--fields', this.applyFilters.bind(this));
     delegate.on(
       'change', '.filters--collapse', this.manageCollapse.bind(this));
+    delegate.on(
+      'click', '.filters--results--clear', this.clearFilters.bind(this));
     this.handlersBound = true;
+  }
+  clearFilters() {
+    const filterCheckboxes = this.elem.querySelectorAll(
+      '.filters--field--option input[type="checkbox"]');
+    Array.prototype.forEach.call(filterCheckboxes, function(checkbox) {
+      checkbox.checked = false;
+    });
+    this.applyFilters();
   }
   filterResults(filters) {
     function allFiltersPass(result) {
@@ -70,6 +81,16 @@ export default class FilterControl {
     } else {
       this.$collapseLabel.textContent = 'Collapse filters';
       this.elem.classList.remove('filters--filters--collapsed');
+    }
+  }
+  updateClearButton() {
+    const selectedFilters = this.elem.querySelectorAll(
+      '.filters--field--option input[type="checkbox"]:checked');
+    const clearButton = this.elem.querySelector('.filters--results--clear');
+    if (selectedFilters.length) {
+      clearButton.disabled = false;
+    } else {
+      clearButton.disabled = true;
     }
   }
   updateStatus(matchingResults) {
