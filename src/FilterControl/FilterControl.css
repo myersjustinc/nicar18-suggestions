@@ -59,6 +59,7 @@
   }
     .filter-control .filters--field--name {
       font-weight: bold;
+      margin-bottom: 0.25em;
       margin-right: 2em;
       margin-top: 0;
     }
