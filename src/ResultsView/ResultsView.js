@@ -1,3 +1,4 @@
+import { format } from 'd3-format';
 import { Delegate } from 'dom-delegate';
 
 import formatTimestamp from '../utils/formatTimestamp';
@@ -6,6 +7,8 @@ import sanitizeFormValue from '../utils/sanitizeFormValue';
 
 import resultsHTML from './ResultsView.html';
 import resultsCSS from './ResultsView.css';  // jshint unused:false
+
+const distanceFormat = format('.2f');
 
 export default class ResultsView {
   constructor(elem, showDetails) {
@@ -123,6 +126,9 @@ export default class ResultsView {
         '</td>',
         '<td class="results--result--transit">',
           this.formatTransit(result['How to get there?']),
+          '<span class="results--result--distance">',
+            distanceFormat(result['Miles from hotel']), ' mi',
+          '</span>',
         '</td>',
         '<td class="results--result--map">',
           '<a ',
