@@ -10,6 +10,13 @@
 .detail-view.detail-view--hidden {
   display: none;
 }
+  .detail-view a {
+    text-decoration: none;
+  }
+    .detail-view a:hover {
+      text-decoration: underline;
+    }
+
   .detail-view .detail--modal--background {
     background-color: #999;
     background-color: rgba(153, 153, 153, 0.2);
