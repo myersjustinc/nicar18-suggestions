@@ -8224,7 +8224,7 @@ module.exports = getHolder;
 /* harmony export (immutable) */ __webpack_exports__["a"] = generateMapLink;
 function generateMapLink(address) {
   return (
-    'https://www.google.com/maps/search/?api=1&query=' +
+    'https://maps.google.com/maps?q=' +
     encodeURIComponent(address));
 }
 

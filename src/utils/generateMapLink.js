@@ -1,5 +1,5 @@
 export default function generateMapLink(address) {
   return (
-    'https://www.google.com/maps/search/?api=1&query=' +
+    'https://maps.google.com/maps?q=' +
     encodeURIComponent(address));
 }
