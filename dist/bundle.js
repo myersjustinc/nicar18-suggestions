@@ -15200,7 +15200,7 @@ function onShowDetail(result) {
   router.navigate(result._lookupTimestamp, {trigger: false, replace: true});
 }
 function onHideDetail() {
-  router.navigate('', {trigger: false, replace: true});
+  router.navigate('home', {trigger: false, replace: true});
 }
 
 var detailElem = document.getElementById('detail');
@@ -15244,8 +15244,13 @@ function init(data) {
   var sorted = initialSort(data);
   filterControl.setResults(sorted);
   filterControl.applyFilters();
+
   router.resultsByTimestamp = resultsView.results;
-  router.history.start({pushState: false});
+
+  var initialURLMatches = router.history.start({pushState: false});
+  if (!initialURLMatches) {
+    router.navigate('home', {trigger: false, replace: true});
+  }
 }
 
 Tabletop.init({
@@ -29193,7 +29198,7 @@ exports.push([module.i, ".results-view {\n  font-family: \"Lucida Grande\", Verd
 
 /* harmony default export */ __webpack_exports__["a"] = (__WEBPACK_IMPORTED_MODULE_0_ampersand_router___default.a.extend({
   routes: {
-    '': 'home',
+    'home': 'home',
     ':timestamp': 'detail'
   },
   home: function() {
@@ -29207,12 +29212,12 @@ exports.push([module.i, ".results-view {\n  font-family: \"Lucida Grande\", Verd
       return;
     }
     if (this.resultsByTimestamp == null) {
-      return this.redirectTo('');
+      return this.redirectTo('home');
     }
 
     var result = this.resultsByTimestamp[timestamp];
     if (result == null) {
-      return this.redirectTo('');
+      return this.redirectTo('home');
     }
 
     this.detailView.render(result);

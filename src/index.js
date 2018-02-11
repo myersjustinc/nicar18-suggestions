@@ -10,7 +10,7 @@ function onShowDetail(result) {
   router.navigate(result._lookupTimestamp, {trigger: false, replace: true});
 }
 function onHideDetail() {
-  router.navigate('', {trigger: false, replace: true});
+  router.navigate('home', {trigger: false, replace: true});
 }
 
 const detailElem = document.getElementById('detail');
@@ -54,8 +54,13 @@ function init(data) {
   const sorted = initialSort(data);
   filterControl.setResults(sorted);
   filterControl.applyFilters();
+
   router.resultsByTimestamp = resultsView.results;
-  router.history.start({pushState: false});
+
+  const initialURLMatches = router.history.start({pushState: false});
+  if (!initialURLMatches) {
+    router.navigate('home', {trigger: false, replace: true});
+  }
 }
 
 Tabletop.init({

@@ -2,7 +2,7 @@ import Router from 'ampersand-router';
 
 export default Router.extend({
   routes: {
-    '': 'home',
+    'home': 'home',
     ':timestamp': 'detail'
   },
   home: function() {
@@ -16,12 +16,12 @@ export default Router.extend({
       return;
     }
     if (this.resultsByTimestamp == null) {
-      return this.redirectTo('');
+      return this.redirectTo('home');
     }
 
     const result = this.resultsByTimestamp[timestamp];
     if (result == null) {
-      return this.redirectTo('');
+      return this.redirectTo('home');
     }
 
     this.detailView.render(result);
