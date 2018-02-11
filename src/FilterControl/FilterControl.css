@@ -98,7 +98,7 @@
         .filter-control .filters--field--option input[type="checkbox"] {
           left: 0;
           position: absolute;
-          top: 0;
+          top: -2px;
         }
         .filter-control .filters--field--option--label {
           display: block;
