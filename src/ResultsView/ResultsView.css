@@ -1,8 +1,9 @@
 .results-view {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", Verdana, Arial, sans-serif;
   margin-top: 5.5em;
 }
   .results-view a {
+    color: #0d0d0d;
     text-decoration: none;
   }
     .results-view a:hover {
@@ -12,6 +13,10 @@
   .results-view .results--results {
     width: 100%;
   }
+    .results-view .results--results th {
+      font-family: Tinos, Times, "Times New Roman", serif;
+      font-size: 1.125em;
+    }
     .results-view .results--results th,
     .results-view .results--results td {
       padding-bottom: 0.75em;
@@ -26,13 +31,15 @@
       .results-view .results--results td abbr {
         text-decoration: none;
       }
+      .results-view .results--result--show-detail {
+        font-family: Tinos, Times, "Times New Roman", serif;
+      }
       .results-view .results--result--distance {
         color: #999;
         display: block;
         font-size: 0.75em;
       }
 
-    .results-view .results--result--map a,
     .results-view .results--result--map abbr {
       text-decoration: none;
     }

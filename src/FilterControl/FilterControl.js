@@ -98,7 +98,9 @@ export default class FilterControl {
     const countElem = this.elem.querySelector('.filters--results--count');
     const countFormatted = apNumber(resultsCount);
     const resultUnits = resultsCount === 1 ? 'result' : 'results';
-    countElem.textContent = countFormatted + ' ' + resultUnits;
+    const statusLowercase = countFormatted + ' ' + resultUnits;
+    const firstLetter = statusLowercase.charAt(0).toUpperCase();
+    countElem.textContent = firstLetter + statusLowercase.slice(1);
   }
 
   // =-=-=-=-=-=-=-=-=-=-=- FILTER BUILDERS FOLLOW =-=-=-=-=-=-=-=-=-=-=-=-=-=-

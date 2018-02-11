@@ -75,7 +75,7 @@ export default class ResultsView {
   }
   formatTransit(rawTransit) {
     const canWalk = /\bWalking distance\b/.test(rawTransit);
-    const canTrain = /\bTrain\b/.test(rawTransit);
+    const canTrain = /\b(Train|Metra)\b/.test(rawTransit);
     const canBus = /\bBus\b/.test(rawTransit);
     const canCar = /\bUber\/Lyft\/Taxi\b/.test(rawTransit);
     let components = [];

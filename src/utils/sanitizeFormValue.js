@@ -8,7 +8,7 @@ export default function sanitizeFormValue(rawValue) {
   });
   const withBreaks = sanitized.replace(/\n/g, '<br>');
   const withLinks = anchorme(withBreaks, {
-    truncate: 30,
+    truncate: 23,
     attributes: [
       {name: 'target', value: '_blank'},
       {name: 'rel', value: 'noopener noreferrer'}

@@ -1,6 +1,6 @@
 .detail-view {
   display: block;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", Verdana, Arial, sans-serif;
   left: 0;
   position: fixed;
   top: 0;
@@ -11,10 +11,17 @@
   display: none;
 }
   .detail-view a {
+    color: #0d0d0d;
     text-decoration: none;
   }
     .detail-view a:hover {
       text-decoration: underline;
+    }
+    .detail-view a:after {
+      content: '\21f1';
+      display: inline-block;
+      margin-left: 0.125em;
+      transform: scaleX(-1);
     }
 
   .detail-view .detail--modal--background {
@@ -29,7 +36,8 @@
   .detail-view .detail--frame {
     background-color: #fff;
     border: 1px solid #000;
-    border-radius: 5px;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.375);
     display: block;
     left: 5%;
     padding: 1em;
@@ -52,6 +60,7 @@
     }
 
     .detail-view .detail--name {
+      font-family: Tinos, Times, "Times New Roman", serif;
       font-size: 1.5em;
       font-weight: bold;
       margin-top: 0.166667em;
@@ -68,9 +77,13 @@
       vertical-align: top;
     }
     .detail-view .detail--details th {
+      font-family: Tinos, Times, "Times New Roman", serif;
       max-width: 10em;
       padding-right: 1em;
       text-align: left;
+    }
+    .detail-view .detail--details td {
+      font-size: 0.875em;
     }
 
 @media screen and (max-width: 25em) {
@@ -83,6 +96,7 @@
     .detail-view .detail--details th,
     .detail-view .detail--details td {
       display: block;
+      max-width: unset;
     }
       .detail-view .detail--details th {
         padding-bottom: 0.5em;

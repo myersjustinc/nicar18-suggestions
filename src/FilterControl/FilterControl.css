@@ -1,5 +1,5 @@
 .filter-control {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Lucida Grande", Verdana, Arial, sans-serif;
   left: 0;
   position: fixed;
   top: 0;
@@ -7,9 +7,11 @@
   z-index: 9001;
 }
 .filter-control .filters--status {
-  background-color: #fff;
+  background-color: #333132;
+  color: #8d8d8d;
+  font-weight: bold;
   margin: 0;
-  padding: 0.75em;
+  padding: 0.5em;
   position: relative;
   z-index: 9010;
 }
@@ -17,20 +19,16 @@
   .filter-control {
     font-size: 0.875em;
   }
-  .filter-control .filters--status {
-    font-size: 1.142857em;
-  }
 }
 
 .filter-control .filters--results--clear {
   background-color: transparent;
   border-radius: 0;
   border: 0;
-  color: #aaa;
+  color: #8d8d8d;
+  font-family: "Lucida Grande", Verdana, Arial, sans-serif;
   float: right;
   padding: 0.25em 0.5em;
-  position: relative;
-  top: -0.25em;
 }
   .filter-control .filters--results--clear:disabled {
     display: none;
@@ -47,8 +45,9 @@
     text-indent: 0;
   }
   .filter-control .filters--fields {
-    background-color: #fff;
+    background-color: #585852;
     box-shadow: 0 1px 3px #000;
+    color: #dddccd;
     margin-bottom: 0;
     margin-top: 0;
     padding: 0.5em;
@@ -114,31 +113,30 @@
     display: none;
   }
   .filter-control .filters--collapse {
-    border-top: 1px solid #aaa;
+    border-top: 2px solid #bebca5;
     text-align: right;
   }
     .filter-control .filters--collapse input[type="checkbox"] {
       display: none;
     }
     .filter-control .filters--collapse--label {
-      background-color: #eee;
-      border: 1px solid #aaa;
-      border-top-width: 0;
+      background-color: #bebca5;
       box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-      color: #666;
+      color: #fff;
       cursor: pointer;
       display: inline-block;
       padding: 0.5em;
       position: relative;
       text-align: center;
       transition: background-color 0.2s, border-color 0.2s, color 0.2s, font-weight 0.2s;
-      width: 8em;
+      width: 8.5em;
     }
       .filter-control .filters--collapse--label:before {
-        color: #aaa;
+        color: #fff;
         content: '\2191';
         left: 0.375em;
         position: absolute;
+        transform: translateY(0.125em);
         transition: transform 0.3s;
         top: 0.25em;
       }
