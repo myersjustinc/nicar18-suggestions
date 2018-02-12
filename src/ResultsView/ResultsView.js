@@ -100,6 +100,32 @@ export default class ResultsView {
     }
     return components.join('');
   }
+  formatType(rawType) {
+    const isAttraction = /\bAttraction\b/.test(rawType);
+    const isBar = /\bBar\b/.test(rawType);
+    const isRestaurant = /\bRestaurant\b/.test(rawType);
+    let components = [];
+    function addAbbr(title, codePoint) {
+      components.push([
+        '<abbr title="', title, '">',
+          String.fromCodePoint(codePoint),
+        '</abbr>'
+      ].join(''));
+    }
+    if (isAttraction) {
+      addAbbr('Attraction', 0x1f5bc);
+    }
+    if (isBar) {
+      addAbbr('Bar', 0x1f943);
+    }
+    if (isRestaurant) {
+      addAbbr('Restaurant', 0x1f354);
+    }
+    if (!components.length) {
+      addAbbr('Other', 0x2754);
+    }
+    return components.join('');
+  }
   handleShowDetailClick(event) {
     const lookupTimestamp = event.target.getAttribute('href').slice(1);
     const result = this.results[lookupTimestamp];
@@ -114,6 +140,9 @@ export default class ResultsView {
   renderRow(result) {
     return [
       '<tr>',
+        '<td class="results--result--type">',
+          this.formatType(result.Type),
+        '</td>',
         '<td class="results--result--name">',
           '<a class="results--result--show-detail" href="#',
             formatTimestamp(result.Timestamp),
@@ -127,7 +156,7 @@ export default class ResultsView {
         '<td class="results--result--transit">',
           this.formatTransit(result['How to get there?']),
           '<span class="results--result--distance">',
-            distanceFormat(result['Miles from hotel']), ' mi',
+            distanceFormat(result['Miles from hotel']), '&nbsp;mi',
           '</span>',
         '</td>',
         '<td class="results--result--map">',
@@ -135,7 +164,7 @@ export default class ResultsView {
             'href="', generateMapLink(result.Location),'" ',
             'target="_blank" rel="noopener noreferrer"',
           '>',
-            '<abbr title="Open map in new window">&#x21f1;</abbr>',
+            '<abbr title="Open map in new window">&#x1f4cd;</abbr>',
           '</a>',
         '</td>',
       '</tr>'

@@ -13,6 +13,9 @@
   .results-view .results--results {
     width: 100%;
   }
+    .results-view .results--results thead {
+      display: none;
+    }
     .results-view .results--results th {
       font-family: Tinos, Times, "Times New Roman", serif;
       font-size: 1.125em;
