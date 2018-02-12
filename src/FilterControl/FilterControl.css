@@ -26,9 +26,14 @@
     font-size: 0.875em;
   }
   .filter-control h1 {
-    font-size: 1.2em;
-    padding: 0.416667em;
+    font-size: 1em;
+    padding: 0.5em;
     padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 20em) {
+  .filter-control {
+    font-size: 0.8em;
   }
 }
 
