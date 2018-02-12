@@ -14,7 +14,7 @@
     width: 100%;
   }
     .results-view .results--results thead {
-      display: none;
+      font-size: 0.75em;
     }
     .results-view .results--results th {
       font-family: Tinos, Times, "Times New Roman", serif;

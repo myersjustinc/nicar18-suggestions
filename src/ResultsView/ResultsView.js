@@ -113,13 +113,13 @@ export default class ResultsView {
       ].join(''));
     }
     if (isAttraction) {
-      addAbbr('Attraction', 0x1f5bc);
+      addAbbr('Attraction', 0x1f3db);
     }
     if (isBar) {
       addAbbr('Bar', 0x1f943);
     }
     if (isRestaurant) {
-      addAbbr('Restaurant', 0x1f354);
+      addAbbr('Restaurant', 0x1f374);
     }
     if (!components.length) {
       addAbbr('Other', 0x2754);
