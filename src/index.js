@@ -51,6 +51,9 @@ function initialSort(data) {
   });
 }
 
+const footerElem = document.getElementById('footer');
+const footerView = new FooterView(footerElem);
+
 function init(data) {
   const sorted = initialSort(data);
   filterControl.setResults(sorted);
@@ -62,6 +65,8 @@ function init(data) {
   if (!initialURLMatches) {
     router.navigate('home', {trigger: false, replace: true});
   }
+
+  footerView.render();
 }
 
 Tabletop.init({
@@ -69,7 +74,3 @@ Tabletop.init({
   callback: init,
   simpleSheet: true
 });
-
-const footerElem = document.getElementById('footer');
-const footerView = new FooterView(footerElem);
-footerView.render();
