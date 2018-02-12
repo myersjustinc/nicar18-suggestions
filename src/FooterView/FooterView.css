@@ -1,0 +1,21 @@
+.footer-view {
+  background-color: #333132;
+  color: #cccccc;
+  font-family: "Lucida Grande", Verdana, Arial, sans-serif;
+  font-size: 0.75em;
+  margin-bottom: -0.666667em;
+  margin-left: -0.666667em;
+  margin-right: 1.333333em;
+  margin-right: -0.666667em;
+  padding: 0.666667em;
+}
+  .footer-view p {
+    margin: 0;
+  }
+  .footer-view a {
+    color: #b2b2b2;
+    text-decoration: none;
+  }
+    .footer-view a:hover {
+      color: #fff;
+    }

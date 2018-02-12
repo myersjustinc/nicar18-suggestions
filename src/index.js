@@ -1,5 +1,6 @@
 import DetailView from './DetailView/DetailView';
 import FilterControl from './FilterControl/FilterControl';
+import FooterView from './FooterView/FooterView';
 import ResultsView from './ResultsView/ResultsView';
 import Router from './Router';
 
@@ -68,3 +69,7 @@ Tabletop.init({
   callback: init,
   simpleSheet: true
 });
+
+const footerElem = document.getElementById('footer');
+const footerView = new FooterView(footerElem);
+footerView.render();
