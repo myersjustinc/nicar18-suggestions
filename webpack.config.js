@@ -48,7 +48,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanWebpackPlugin(['dist'], {exclude: ['index.html']}),
+    new CleanWebpackPlugin(['dist'], {exclude: ['index.html', 'og.png']}),
     new UglifyJsPlugin({sourceMap: true})
   ],
   devtool: 'source-map',
