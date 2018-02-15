@@ -116,7 +116,7 @@ export default class ResultsView {
       addAbbr('Attraction', 0x1f3db);
     }
     if (isBar) {
-      addAbbr('Bar', 0x1f943);
+      addAbbr('Bar', 0x1f37a);
     }
     if (isRestaurant) {
       addAbbr('Restaurant', 0x1f374);
