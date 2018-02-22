@@ -3,8 +3,11 @@ import FilterControl from './FilterControl/FilterControl';
 import FooterView from './FooterView/FooterView';
 import ResultsView from './ResultsView/ResultsView';
 import Router from './Router';
+import sortByDistance from './utils/sortByDistance';
 
 const Tabletop = window.Tabletop;
+
+// =-=-=-=-=-=-=-=-=-=-=-=-= ROUTER/RESULTS WIRING =-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 const router = new Router();
 function onShowDetail(result) {
@@ -23,6 +26,8 @@ function showDetails(result) {
   detailView.show();
 }
 
+// =-=-=-=-=-=-=-=-=-=-=-=- REMAINING UI COMPONENTS -=-=-=-=-=-=-=-=-=-=-=-=-=-
+
 const resultsElem = document.getElementById('results');
 const resultsView = new ResultsView(resultsElem, showDetails);
 
@@ -31,31 +36,13 @@ const filterControl = new FilterControl(
   filterElem, resultsView.render.bind(resultsView));
 filterControl.render();
 
-function initialSort(data) {
-  data.forEach(function(result) {
-    result._distance = parseFloat(result['Miles from hotel']);
-  });
-  return data.sort(function(a, b) {
-    const aDist = a._distance;
-    const bDist = b._distance;
-    if ((isNaN(aDist) && isNaN(bDist)) || (aDist === bDist)) {
-      return 0;
-    }
-    if (isNaN(bDist) || (aDist < bDist)) {
-      return -1;
-    }
-    if (isNaN(aDist) || (aDist > bDist)) {
-      return 1;
-    }
-    return 0;
-  });
-}
-
 const footerElem = document.getElementById('footer');
 const footerView = new FooterView(footerElem);
 
+// =-=-=-=-=-=-=-=-=-=-=- DATA REQUEST AND FINAL INIT -=-=-=-=-=-=-=-=-=-=-=-=-
+
 function init(data) {
-  const sorted = initialSort(data);
+  const sorted = sortByDistance(data);
   filterControl.setResults(sorted);
   filterControl.applyFilters();
 
