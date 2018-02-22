@@ -57,6 +57,7 @@ function init(data) {
 }
 
 Tabletop.init({
+  endpoint: 'https://myersjustinc-tabletop-cache.herokuapp.com/sheets',
   key: '1vpMSccei8cyvg6zPU5vtppV8hvNtLxeSH_jvo5MnHbM',
   callback: init,
   simpleSheet: true
