@@ -50,6 +50,18 @@
     display: none;
   }
 
+.filter-control .filters--friends {
+  color: inherit;
+  display: block;
+  font-size: 0.8em;
+  margin-top: 0.625em;
+  text-decoration: none;
+}
+  .filter-control .filters--friends:hover {
+    color: #aaa;
+    text-decoration: underline;
+  }
+
 .filter-control .filters--filters {
   margin-bottom: 0;
 }

@@ -1,7 +1,20 @@
 .results-view {
   font-family: "Lucida Grande", Verdana, Arial, sans-serif;
-  margin-top: 7em;
+  margin-top: 9em;
 }
+/*
+@media screen and (max-width: 25em) {
+  .results-view {
+    margin-top: 9em;
+  }
+}
+*/
+@media screen and (max-width: 20em) {
+  .results-view {
+    margin-top: 7em;
+  }
+}
+
   .results-view a {
     color: #0d0d0d;
     text-decoration: none;
